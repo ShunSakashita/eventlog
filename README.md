@@ -5,7 +5,7 @@ PHP(Laravel)
 二週間前後
 ## 開発人数
 一人
-## 各ファイルの説明
+## 各ファイルの説明(開発の際に自分でコードを書いたファイル)
 - app/Http/Controllers/PostController.php
     - MVCモデルにおけるController部分。
 - app/Http/Models/Post.php
