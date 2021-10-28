@@ -1,0 +1,58 @@
+.top{
+    display: flex;
+}
+.button{
+    display: flex;
+}
+#likebtn{
+    height:30px;
+    width:180px;
+    margin: 30px;
+}
+a{
+    text-decoration: none;
+}
+.post{
+    font-size: 40px;
+}
+#sort{
+    flex-direction: row;
+}
+li{
+    list-style: none;
+}
+form{
+
+    flex-direction: row;
+}
+p{
+    color: red;
+}
+#post_form{
+    display: block;
+}
+div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+ul{
+    display: flex;
+}
+li{
+    flex-direction: row;
+    margin: auto;
+}
+button{
+    width: 90px;
+    height: 30px;
+    margin: 10px;
+}
+.show_database{
+    border: double;
+}
+.error{
+    color: red;
+}
+h4{
+    color: red;
+}
