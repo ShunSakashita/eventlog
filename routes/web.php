@@ -16,6 +16,9 @@ use App\Http\Controllers\PostController;
 Route::get('/',[PostController::class,'index']) //最初のページのルーティング
     ->name('index');
 
+Route::get('/list/{member}',[PostController::class,'list']) //メンバー別のページのルーティング
+    ->name('list');
+
 Route::get('/post',[PostController::class,'post']) //投稿ページのルーティング
     ->name('post');
 

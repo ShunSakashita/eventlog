@@ -13,6 +13,23 @@ class PostController extends Controller
             return view('index')
                 ->with(['post'=>$id]);
        }
+
+    // public function list(Post $post){
+    //     $name = $post->name;
+    //     $show = Post::where('name',$name)
+    //             ->select('id','name','place','date','place','created_at','content','like')
+    //             ->get();
+    //     return view('list')
+    //         ->with(['name'=>$name,'show'=>$show]);
+    // }
+
+    public function list($member){
+        $show = Post::where('name',$member)
+                    ->select('id','name','place','date','place','created_at','content','like')
+                    ->get();
+            return view('list')
+                ->with(['show'=>$show,'member'=>$member]);
+    }
     public function post(){
         return view('post');
     }

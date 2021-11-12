@@ -11,7 +11,7 @@
             </form>
             @forelse ($post as $content)
             <div class="show_database">
-            id:{{$content->id}}作成日時:{{$content->created_at}} メンバー名:{{$content->name}}<br>
+            id:{{$content->id}}作成日時:{{$content->created_at}} メンバー名:<a href="{{route('list',$content->name)}}">{{$content->name}}</a><br>
             握手した日時{{$content->date}}　握手会会場:{{$content->place}}<br>
             会話内容:{!! nl2br(e($content->content))!!}<br>
             いいね数:{{$content->like}}
