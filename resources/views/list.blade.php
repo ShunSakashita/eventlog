@@ -1,6 +1,6 @@
 <x-layout>
     &laquo; <a href="{{ route('index') }}">戻る</a>
-    <h3>{{$member}}の握手会</h3>
+    <h3>{{$member}}さんに関する投稿一覧</h3>
 
 
     @forelse ($show as $content)

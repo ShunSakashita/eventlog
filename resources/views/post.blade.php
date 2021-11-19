@@ -4,10 +4,28 @@
     <h3>投稿ページ</h3>
     <form action="{{route('submit')}}" method="POST" id="post_form">
         @csrf
-        <div class="memberName" id="posts">メンバー名:<p>※必須</p><label><input type="text" name="name" value="{{old('name')}}"></label></div>
+        <div class="g_name">グループ名:<p>※必須</p>
+            <select name="" id="groupname" onchange="update_options()">
+                <option value="">選択してください</option>
+                <option value="hinata">日向坂46</option>
+                <option value="sakura">櫻坂46</option>
+            </select>
+        </div>
+        <div class="memberName" id="posts">メンバー名:
+                <select name="" id="name">
+                    <option value="">選択してください</option>
+
+                </select>
         @error('name')
         <div class="error" id="posts">{{$message}}</div>
         @enderror
+        </div>
+
+
+        {{-- <div class="memberName" id="posts">メンバー名:<p>※必須</p><label><input type="text" name="name" value="{{old('name')}}"></label></div>
+        @error('name')
+        <div class="error" id="posts">{{$message}}</div>
+        @enderror --}}
         <div class="place" id="posts">場所:<p>※必須</p><label><input type="text" name="place" value="{{old('place')}}"></label></div>
         @error('place')
         <div class="error" id="posts">{{$message}}</div>
@@ -26,4 +44,5 @@
         @enderror
         <button name="submit">投稿する</button>
     </form>
+    <script src="{{asset('/js/show_memberlist.js')}}"></script>
 </x-layout>
