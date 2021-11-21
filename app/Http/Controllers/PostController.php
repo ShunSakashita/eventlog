@@ -22,7 +22,18 @@ class PostController extends Controller
     //     return view('list')
     //         ->with(['name'=>$name,'show'=>$show]);
     // }
+    public function search(Request $request){
+        $word = $request->search;
+        $search = Post::select('id','name','place','date','place','created_at','content','like')
+                        ->where("content","LIKE","%$word%")
+                        ->get();
 
+        return view('result')
+            ->with(['result'=>$search,'word'=>$word]);
+    }
+    public function result(){
+        return view('result');
+    }
     public function list($member){
         $show = Post::where('name',$member)
                     ->select('id','name','place','date','place','created_at','content','like')

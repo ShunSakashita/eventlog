@@ -1,5 +1,22 @@
 .top{
+    display: block;
+    margin-bottom: 0px;
+}
+.search{
     display: flex;
+}
+.search input{
+    margin-top: 25px;
+}
+#show_top{
+    display: flex;
+}
+h1{
+    display: flex;
+}
+h2{
+    flex-direction: row;
+    margin-right: 22px;
 }
 .button{
     display: flex;
@@ -16,14 +33,13 @@ a{
     font-size: 40px;
 }
 #sort{
-    flex-direction: row;
+    flex-direction: column;
 }
 li{
     list-style: none;
 }
 form{
-
-    flex-direction: row;
+    flex-direction:column;
 }
 p{
     color: red;
