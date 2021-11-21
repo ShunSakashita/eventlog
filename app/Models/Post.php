@@ -11,6 +11,7 @@ class Post extends Model
     use HasFactory;
     protected $table = 'post';
     protected $fillable = [
+        'teamname',
         'name',
         'place',
         'date',

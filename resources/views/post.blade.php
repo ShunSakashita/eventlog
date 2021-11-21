@@ -4,15 +4,15 @@
     <h3>投稿ページ</h3>
     <form action="{{route('submit')}}" method="POST" id="post_form">
         @csrf
-        <div class="g_name">グループ名:<p>※必須</p>
-            <select name="" id="groupname" onchange="update_options()">
-                <option value="">選択してください</option>
+        <div class="g_name" id="posts">グループ名:<p>※必須</p>
+            <select name="teamname" id="teamname" onchange="update_options()">
+                <option>選択してください</option>
                 <option value="hinata">日向坂46</option>
                 <option value="sakura">櫻坂46</option>
             </select>
         </div>
         <div class="memberName" id="posts">メンバー名:
-                <select name="" id="name">
+                <select name="name" id="name">
                     <option value="">選択してください</option>
 
                 </select>

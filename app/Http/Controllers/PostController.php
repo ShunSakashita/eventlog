@@ -36,6 +36,7 @@ class PostController extends Controller
     public function submit(Request $request){
         $request->validate([
             'name'=>'required',
+            'teamname'=>'required',
             'place'=>'required',
             'date'=>'required',
             'content'=>'required',
@@ -43,6 +44,7 @@ class PostController extends Controller
             'pass'=>'required|size:4',
         ],[
             'name.required'=>'メンバー名は必須です。',
+            'teamname.required'=>'グループは選択必須です。',
             'place.required'=>'場所は必須です。',
             'date.required'=>'日付は必須です。',
             'content.required'=>'内容は必須です。',
@@ -53,6 +55,7 @@ class PostController extends Controller
 
         $post = new Post();
         $post->name = $request->name;
+        $post->teamname = $request->teamname;
         $post->place = $request->place;
         $post->date = $request->date;
         $post->content = $request->content;
