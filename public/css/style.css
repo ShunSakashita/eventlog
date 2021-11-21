@@ -2,6 +2,16 @@
     display: block;
     margin-bottom: 0px;
 }
+#welcome{
+    border-bottom: solid purple;
+}
+.aaa{
+    display: flex;
+}
+.bbb{
+    display: flex;
+}
+
 .search{
     display: flex;
 }
@@ -10,6 +20,7 @@
 }
 #show_top{
     display: flex;
+    border-bottom: solid #FFDBED;
 }
 h1{
     display: flex;
@@ -17,6 +28,7 @@ h1{
 h2{
     flex-direction: row;
     margin-right: 22px;
+    border-bottom: solid aqua;
 }
 .button{
     display: flex;

@@ -31,8 +31,20 @@ class PostController extends Controller
         return view('result')
             ->with(['result'=>$search,'word'=>$word]);
     }
+    public function member_search(Request $request){
+        $member = $request->name;
+        $m_search = Post::select('id','name','place','date','place','created_at','content','like')
+                        ->where("name","=","$member")
+                        ->get();
+
+        return view('member_result')
+            ->with(['result'=>$m_search,'member'=>$member]);
+    }
     public function result(){
         return view('result');
+    }
+    public function member_result(){
+        return view('member_result');
     }
     public function list($member){
         $show = Post::where('name',$member)

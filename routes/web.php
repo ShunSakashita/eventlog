@@ -19,6 +19,12 @@ Route::get('/',[PostController::class,'index']) //最初のページのルーテ
 Route::post('/search',[PostController::class,'search'])
     ->name('search');
 
+Route::post('/member_search',[PostController::class,'member_search']) //最初のページのルーティング
+    ->name('member_search');
+
+Route::get('/member_result/{member}',[PostController::class,'member_result'])
+    ->name('member_result');
+
 Route::get('/result/{result}',[PostController::class,'result'])
     ->name('result');
 

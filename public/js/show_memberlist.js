@@ -78,7 +78,6 @@ function update_options(){
         //show_sakuralist();
     }
 }
-
 // function show_hinatalist(){
 //     for(var i=0;i<member_list_hinata.length;i++){
 //         var el = document.createElement("option");
